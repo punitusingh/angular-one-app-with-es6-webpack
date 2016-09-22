@@ -14,7 +14,7 @@ export default function routing($urlRouterProvider, $locationProvider,$stateProv
 
     $stateProvider.state('search',{
         url:'/search',
-        template:require('./components/search/search.html'),
+        template:require('./modules/search/search.html'),
         controller:'SearchController',
         controllerAs:'search'
     });

@@ -8,7 +8,7 @@ import config from './app.config';
 import AppCtrl from './app.controller';
 import appDirective from './app.directive';
 
-import search from './components/search/search';
+import search from './modules/search/search';
 
 
 const MODULE_NAME = 'app';
