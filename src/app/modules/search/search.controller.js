@@ -11,6 +11,7 @@ export default class SearchController{
         this.name='Search Items';
         this.searchService=SearchService;
         var search = this;
+        this.defaultResults();
         $scope.searchItems = this.searchItems.bind(this);
         $scope.searchResponseFormatter=function(json){
             for(var key of Object.keys(json)){
@@ -30,19 +31,24 @@ export default class SearchController{
             ];
         };
 
+    }
 
-        search.searchResultItems=[{"name":"bread", "description":"simple white bread"},
-            {"name":"gluten free bread", "description":"gluten free bread"},
-            {"name":"sourdough bread", "description":"sourdough bread"},
-            {"name":"whole wheat bread", "description":"whole wheat bread"},
-            {"name":"pita bread", "description":"pita bread"},
-            {"name":"eggs organic", "description":"eggs organic"},
-            {"name":"eggs cage free", "description":"eggs cage free"},
-            {"name":"pasture raised eggs", "description":"pasture raised eggs"},
-            {"name":"organic brown eggs", "description":"organic brown eggs"},
-            {"name": "organic cage free eggs", "description": "organic cage free eggs"}
-        ];
+    defaultResults(){
+        let results = [];
+        var search=this;
+        this.searchService.searchItems().then(function(response){
 
+            console.log("results in defaultResults",response);
+            response.data["bread"].forEach(function(item){
+                results.push(item);
+            });
+
+            response.data["eggs"].forEach(function(item){
+                results.push(item);
+            });
+            console.log("resulsts",results);
+            search.searchResultItems=results;
+        });
 
     }
 
@@ -50,6 +56,8 @@ export default class SearchController{
         this.userInput = userInput;
        return this.searchService.searchItems(userInput,promise);
     }
+
+
 
 }
 

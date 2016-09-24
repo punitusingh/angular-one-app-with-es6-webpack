@@ -12,12 +12,7 @@ export default class SearchService{
     }
 
     searchItems(userInput,promise){
-        console.log("arguments",arguments);
-        console.log("this.name",this.name);
         return this.$http.get('autocomplete.json');
-
-        //{"data": [Array of objects]}
-
     }
 
 }
