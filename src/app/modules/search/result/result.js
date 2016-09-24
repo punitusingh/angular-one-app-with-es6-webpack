@@ -1,15 +1,15 @@
-import 'angucomplete-alt/angucomplete-alt.css';
-
 import angular from 'angular';
-import resultDir from './result.directive';
-import detailModal from './productDetail/detail-modal';
+import ResultController from './result.controller';
+import resultComponent from './result.component';
+import detailModal from '../../productDetail/detail-modal';
 import './result.scss';
 
 /**
  * @ngInject
  */
-export default angular.module('app.search.result',[detailModal])
-    .directive("result",resultDir)
+export default angular.module('app.search.result',[detailModal,'ui.bootstrap'])
+    .controller("ResultController",ResultController)
+    .component("result",resultComponent)
     .name;
 
 

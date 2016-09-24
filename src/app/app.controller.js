@@ -1,4 +1,4 @@
-export default class AppCtrl {
+export default class AppController {
     constructor(){
         this.name='AppController';
     }

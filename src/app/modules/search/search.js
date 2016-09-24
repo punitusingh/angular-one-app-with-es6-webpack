@@ -3,8 +3,8 @@ import 'angucomplete-alt/angucomplete-alt.css';
 import angular from 'angular';
 import 'angucomplete-alt';
 
-import SearchCtrl from './search.controller';
-import searchDir from './search.directive';
+import SearchController from './search.controller';
+import searchComponent from './search.component';
 import SearchService from './search.service';
 
 import searchResult from './result/result';
@@ -15,8 +15,8 @@ import searchResult from './result/result';
  */
 export default angular.module('app.search',['angucomplete-alt',searchResult])
     .service('SearchService',SearchService)
-    .directive("search",searchDir)
-    .controller("SearchController",SearchCtrl)
+    .component("search",searchComponent)
+    .controller("SearchController",SearchController)
     .name;
 
 

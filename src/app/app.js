@@ -5,8 +5,8 @@ import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
 import config from './app.config';
-import AppCtrl from './app.controller';
-import appDirective from './app.directive';
+import AppController from './app.controller';
+import appComponent from './app.component';
 
 import search from './modules/search/search';
 
@@ -15,8 +15,8 @@ const MODULE_NAME = 'app';
 
 export default angular.module(MODULE_NAME, [uirouter,  search])
     .config(config)
-    .directive('app', appDirective)
-    .controller('AppCtrl', AppCtrl).name;
+    .component('app', appComponent)
+    .controller('AppCtrl', AppController).name;
 
 
 

@@ -10,6 +10,5 @@
                       title-field="name"
                       input-class="form-control form-control-small"></angucomplete-alt>
 </div>
-<ul class="search-results">
-    <result ng-repeat="item in search.searchResultItems track by $index"></result>
-</ul>
+{{search.searchResultItems}}
+<result items="search.searchResultItems"></result>
