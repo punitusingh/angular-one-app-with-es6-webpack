@@ -1,17 +1,15 @@
 import './detail-modal.scss';
-import angularModalService from 'angular-modal-service';
 import angular from 'angular';
 import detailDirective from './detail-modal.component';
 import DetailModalController from './detail-modal.contoller';
-import DetailModalProvider from './detail-modal.provider';
 
 /**
  * @ngInject
  */
-export default angular.module('app.productDetail',['angularModalService'])
+export default angular.module('app.productDetail',[])
     .controller('DetailModalController',DetailModalController)
     .component("detail-modal",detailDirective)
-    .provider("DetailModalProvider",DetailModalProvider)
+    //.provider("DetailModalProvider",DetailModalProvider)
     .name;
 
 
