@@ -1,18 +1,12 @@
+import 'meanie-angular-modal';
+import modalConfig from './detail-modal.config';
 import './detail-modal.scss';
-import angular from 'angular';
-import detailDirective from './detail-modal.component';
-import DetailModalController from './detail-modal.contoller';
 
-/**
- * @ngInject
- */
-export default angular.module('app.productDetail',[])
-    .controller('DetailModalController',DetailModalController)
-    .component("detail-modal",detailDirective)
-    //.provider("DetailModalProvider",DetailModalProvider)
-    .name;
+export default {
+  name: 'Modal.Service',
+  modalConfig: modalConfig
+};
 
 
-/*
-Module: when you define a module, you need to export it's name;
- */
+// import angular from 'angular';
+// import detailModalController from './detail-modal'

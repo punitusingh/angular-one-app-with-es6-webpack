@@ -6,6 +6,8 @@ export default class SearchController {
    *@ngInject
    */
   constructor($scope, SearchService) {
+    console.log('search.controller arguments', arguments);
+    console.log('search.controller this', this);
     this.name = 'Search Items';
     this.searchService = SearchService;
     var search = this;
@@ -13,14 +15,14 @@ export default class SearchController {
     $scope.searchItems = this.searchItems.bind(this);
     $scope.searchResponseFormatter = function(json) {
       for (var key of Object.keys(json)) {
-        if(key.indexOf(search.userInput)!=-1) {
+        if (key.indexOf(search.userInput)!== -1) {
           return {results:json[key]}
         }
       }
       return {results:[]};
     };
     $scope.objectSelectedCallback = function(object) {
-      console.log('objectSelectedCallback object', object);
+      // console.log('objectSelectedCallback object', object);
       search.searchResultItems = [{"name":"bread", "description":"simple white bread"},
         {"name":"gluten free bread", "description":"gluten free bread"},
         {"name":"sourdough bread", "description":"sourdough bread"},
@@ -34,7 +36,7 @@ export default class SearchController {
     let results = [];
     var search = this;
     this.searchService.searchItems().then(function(response) {
-      console.log('results in defaultResults', response);
+      // console.log('results in defaultResults', response);
       response.data["bread"].forEach(function(item) {
         results.push(item);
       });
@@ -42,7 +44,7 @@ export default class SearchController {
       response.data["eggs"].forEach(function(item) {
         results.push(item);
       });
-      console.log("resulsts", results);
+      // console.log("results", results);
       search.searchResultItems = results;
     });
   }

@@ -1,5 +1,5 @@
 let detailModel =  {
-    template: require('./detail-modal.html')
+  template: require('./detail-modal.html')
 };
 
 export default detailModel;

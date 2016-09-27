@@ -12,7 +12,7 @@ import search from './modules/search/search';
 
 const MODULE_NAME = 'app';
 
-export default angular.module(MODULE_NAME, [uirouter,  search])
+export default angular.module(MODULE_NAME, [uirouter, search])
 	.config(config)
 	.component('app', appComponent)
 	.controller('AppCtrl', AppController).name;

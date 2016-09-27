@@ -1,6 +1,7 @@
-export default class DetailModalController{
-    constructor(){
-        console.log("detail modal controller");
-    }
+export default class DetailModalController {
+  constructor($modal) {
+    console.log("detail modal controller");
 
+    // const modalInstance = 
+  }
 }
