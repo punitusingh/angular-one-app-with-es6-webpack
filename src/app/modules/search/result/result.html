@@ -1,9 +1,8 @@
 <ul class="search-results">
-
-    <li class="search-result-item img-thumbnail img-responsive" ng-repeat="item in resultCtrl.items">
-        <img ng-src="{{item.url}}" ng-click="resultCtrl.productDetail()"/>
-        <div class="item-info">{{item.description}}</div>
-        <button class="btn btn-success small remove-button"><i class="glyphicon glyphicon-minus"></i></button>
-        <button class="btn btn-success small add-button"><i class="glyphicon glyphicon-plus"></i>ADD</button>
-    </li>
+	<li class="search-result-item img-thumbnail img-responsive" ng-repeat="item in resultCtrl.items">
+	  <img ng-src="{{item.url}}" ng-click="resultCtrl.productDetail()"/>
+	  <div class="item-info">{{item.description}}</div>
+	  <button class="btn btn-success small remove-button"><i class="glyphicon glyphicon-minus"></i></button>
+	  <button class="btn btn-success small add-button"><i class="glyphicon glyphicon-plus"></i>ADD</button>
+	</li>
 </ul>

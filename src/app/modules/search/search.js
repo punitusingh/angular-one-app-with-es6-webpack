@@ -9,16 +9,14 @@ import SearchService from './search.service';
 
 import searchResult from './result/result';
 
-
 /**
  * @ngInject
  */
-export default angular.module('app.search',['angucomplete-alt',searchResult])
-    .service('SearchService',SearchService)
-    .component("search",searchComponent)
-    .controller("SearchController",SearchController)
-    .name;
-
+export default angular.module('app.search', ['angucomplete-alt', searchResult])
+	.service('SearchService', SearchService)
+	.component('search', searchComponent)
+	.controller('SearchController', SearchController)
+	.name;
 
 /*
 Module: when you define a module, you need to export it's name;

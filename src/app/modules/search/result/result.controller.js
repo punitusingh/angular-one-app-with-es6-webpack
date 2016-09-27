@@ -1,5 +1,3 @@
-export default class ResultController{
-    constructor(){
-    }
-
+export default class ResultController {
+	constructor() {}
 }

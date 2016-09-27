@@ -1,14 +1,15 @@
 <div class="search">
-    <h1>{{search.name}}</h1>
-    <angucomplete-alt id="search-groceries"
-                      placeholder="Search Groceries"
-                      pause="400"
-                      selected-object="objectSelectedCallback"
-                      remote-api-handler="searchItems"
-                      remote-url-data-field="results"
-                      remote-url-response-formatter="searchResponseFormatter"
-                      title-field="name"
-                      input-class="form-control form-control-small"></angucomplete-alt>
+  <h1>{{search.name}}</h1>
+  <angucomplete-alt id="search-groceries"
+                    placeholder="Search Groceries"
+                    pause="400"
+                    selected-object="objectSelectedCallback"
+                    remote-api-handler="searchItems"
+                    remote-url-data-field="results"
+                    remote-url-response-formatter="searchResponseFormatter"
+                    title-field="name"
+                    input-class="form-control form-control-small">
+  </angucomplete-alt>
 </div>
 
 <result items="search.searchResultItems"></result>

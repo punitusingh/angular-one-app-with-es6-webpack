@@ -7,11 +7,10 @@ import './result.scss';
 /**
  * @ngInject
  */
-export default angular.module('app.search.result',[detailModal,'ui.bootstrap'])
-    .controller("ResultController",ResultController)
-    .component("result",resultComponent)
-    .name;
-
+export default angular.module('app.search.result', [detailModal, 'ui.bootstrap'])
+	.controller("ResultController", ResultController)
+	.component("result", resultComponent)
+	.name;
 
 /*
 Module: when you define a module, you need to export it's name;
