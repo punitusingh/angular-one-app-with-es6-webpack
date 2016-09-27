@@ -1,5 +1,10 @@
-let detailModel =  {
-  template: require('./detail-modal.html')
+let detailModal = {
+  bindings: {
+    product: "="
+  },
+  template: require('./detail-modal.html'),
+  controller: 'DetailModalController',
+  controllerAs: 'detailModalCtrl'  
 };
 
-export default detailModel;
+export default detailModal;

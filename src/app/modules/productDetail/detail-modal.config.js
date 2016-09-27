@@ -1,11 +1,14 @@
-function detailModalController ($modal) {
-  console.log('detailModalController: hi!');
-}
+import productModalController from './detail-modal.controller';
+// function productModalController ($modal) {
+//   console.log('productModalController arguments', arguments);
+//   console.log('productModalController: hi!');
+// }
 
 function detailModalConfig($modalProvider) {
+  console.log('detailModalConfig args', arguments);
   $modalProvider.modal('productModal', {
     template: require('./detail-modal.html'),
-    controller: detailModalController
+    controller: productModalController
   });
 }
 
