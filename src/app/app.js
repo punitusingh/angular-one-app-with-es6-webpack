@@ -15,7 +15,7 @@ const MODULE_NAME = 'app';
 export default angular.module(MODULE_NAME, [uirouter, search])
 	.config(config)
 	.component('app', appComponent)
-	.controller('AppCtrl', AppController).name;
+	.controller('AppController', AppController).name;
 
 /*
  Module: when you define a module, you need to export it's name;

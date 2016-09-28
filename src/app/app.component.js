@@ -1,6 +1,6 @@
 let app = {
 	template: require('./app.html'),
-	controller: 'AppCtrl',
+	controller: 'AppController',
 	controllerAs: 'app'
 };
 

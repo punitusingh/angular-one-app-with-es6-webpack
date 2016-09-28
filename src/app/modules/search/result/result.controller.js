@@ -1,4 +1,11 @@
 export default class ResultController {
+    /**
+     *
+     * @param $scope
+     * @param $modal
+     * @param selectedProduct
+     * @ngInject
+     */
 	constructor($scope, $modal, selectedProduct) {
     console.log('result.controller has arguments', arguments);
     // console.log('result.controller has $scope', $scope);
