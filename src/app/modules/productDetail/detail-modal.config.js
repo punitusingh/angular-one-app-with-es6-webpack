@@ -1,15 +1,8 @@
-import productModalController from './detail-modal.controller';
-// function productModalController ($modal) {
-//   console.log('productModalController arguments', arguments);
-//   console.log('productModalController: hi!');
-// }
+export default function detailModalConfig($modalProvider) {
+    $modalProvider.modal('productModal', {
+        template: require('./detail-modal.html'),
+        controller: 'DetailModalController',
+        controllerAs: 'detailModalCtrl'
+    })
+};
 
-function detailModalConfig($modalProvider) {
-  console.log('detailModalConfig args', arguments);
-  $modalProvider.modal('productModal', {
-    template: require('./detail-modal.html'),
-    controller: productModalController
-  });
-}
-
-export default detailModalConfig;

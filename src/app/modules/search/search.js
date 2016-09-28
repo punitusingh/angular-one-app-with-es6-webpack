@@ -1,4 +1,5 @@
 import 'angucomplete-alt/angucomplete-alt.css';
+import './search.scss';
 
 import angular from 'angular';
 import 'angucomplete-alt';

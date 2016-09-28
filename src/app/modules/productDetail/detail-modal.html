@@ -1,5 +1,6 @@
-<div class="product-detail">
-  <div>This is the modal for {{detailModalCtrl}}</div>
+<div class="product-detail Modal">
+  <div>This is the modal for {{detailModalCtrl.selectedProduct.item}}</div>
+  <img ng-src="{{detailModalCtrl.selectedProduct.item.url}}"/>
   <button class="btn btn-primary" ng-click="detailModalCtrl.testClick()">OK</button>
   <button class="btn btn-warning">Cancel</button>
 </div>
