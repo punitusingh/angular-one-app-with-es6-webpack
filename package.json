@@ -8,7 +8,7 @@
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
     "start": "node ./bin/www",
-    "production": "webpack-dev-server --content-base dist/"
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "angucomplete-alt": "^2.5.0",
@@ -22,9 +22,9 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "jade": "~1.11.0",
-    "morgan": "~1.7.0"
-  },
-  "devDependencies": {
+    "morgan": "~1.7.0",
+    "rimraf": "^2.5.1",
+    "webpack": "^1.12.13",
     "angular-mocks": "^1.5.0",
     "autoprefixer": "^6.0.3",
     "babel-core": "^6.2.1",
@@ -53,11 +53,12 @@
     "phantomjs-prebuilt": "^2.1.4",
     "postcss-loader": "^0.9.1",
     "raw-loader": "^0.5.1",
-    "rimraf": "^2.5.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+
   },
   "main": "app.js",
   "repository": {
