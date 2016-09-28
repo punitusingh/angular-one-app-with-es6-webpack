@@ -7,15 +7,22 @@
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server",
-    "production":"webpack-dev-server --content-base dist/"
+    "start": "node ./bin/www",
+    "production": "webpack-dev-server --content-base dist/"
   },
   "dependencies": {
     "angucomplete-alt": "^2.5.0",
     "angular": "^1.5.0",
     "angular-ui-router": "^0.3.1",
     "bootstrap": "^3.3.7",
-    "meanie-angular-modal": "^1.7.2"
+    "express": "^4.14.0",
+    "meanie-angular-modal": "^1.7.2",
+    "serve-favicon": "~2.3.0",
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
@@ -51,5 +58,16 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punitusingh/angular-one-app-with-es6-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/punitusingh/angular-one-app-with-es6-webpack/issues"
+  },
+  "homepage": "https://github.com/punitusingh/angular-one-app-with-es6-webpack#readme"
 }
