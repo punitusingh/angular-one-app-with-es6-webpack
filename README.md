@@ -4,7 +4,7 @@
 ```bash
 $ git clone https://github.com/preboot/angular-one-app-with-es6-webpack".git angular-poc
 
-$ angular-poc
+$ cd angular-poc
 
 $ npm install
 
