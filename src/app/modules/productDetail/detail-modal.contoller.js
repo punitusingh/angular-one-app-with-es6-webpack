@@ -6,9 +6,11 @@ export default class DetailModalController {
    * @param selectedProduct
    * @ngInject
      */
-  constructor($scope, $modal, selectedProduct) {
+  constructor($scope, $modal, selectedProduct, shoppingCart) {
+    console.log('detal-modal.controller has args', arguments);
     this.selectedProduct = selectedProduct;
     this.modal = $modal;
+    this.shoppingCart = shoppingCart;
   }
   close() {
     this.modal.closeAll();

@@ -5,5 +5,21 @@
     &#47;
     <a>{{detailModalCtrl.selectedProduct.item.category}}</a>
   </div>
-  <img ng-src="{{detailModalCtrl.selectedProduct.item.url}}"/>
+  <div class="col-xs-12">
+    <img ng-src="{{detailModalCtrl.selectedProduct.item.url}}"/>
+    <div class="product-options">
+      <div>{{detailModalCtrl.selectedProduct.item.description}}</div>
+      <div>{{detailModalCtrl.selectedProduct.item.weight}}</div>
+      <div>{{detailModalCtrl.selectedProduct.item.price | currency}}</div>
+      <button class="btn btn-success btn-block"
+              ng-click="detailModalCtrl.shoppingCart.increment(detailModalCtrl.selectedProduct.item.name)">
+        <span ng-show="detailModalCtrl.shoppingCart.getItemCount(detailModalCtrl.selectedProduct.item.name) > 0">
+          {{detailModalCtrl.shoppingCart.getItemCount(detailModalCtrl.selectedProduct.item.name)}} in Cart
+        </span>
+        <span ng-hide="detailModalCtrl.shoppingCart.getItemCount(detailModalCtrl.selectedProduct.item.name) > 0">
+          Add to Cart
+        </span>
+      </button>
+    </div>
+  <div>
 </div>

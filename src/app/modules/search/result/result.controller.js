@@ -17,6 +17,10 @@ export default class ResultController {
     console.log('item that was clicked', item);
     console.log('result.controller this is', this);
     this.selectedProduct.item = item;
-    this.modal.open('productModal', item);
+    this.modal.open('productModal', {
+      locals: {
+        "item": item
+      }
+    });
   }
 }

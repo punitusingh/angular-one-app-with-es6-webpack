@@ -1,7 +1,7 @@
 .product-detail-modal {
   outline: none;
-  width: 350px;
-  height: 300px;
+  width: 700px;
+  max-height: 375px;
   margin-bottom: 1rem;
   transform: translate3d(0,0,0);
   background: #fff;
@@ -16,12 +16,12 @@
   }
   .product-detail-modal-close-btn {
     cursor: pointer;
-    color: white;
+    color: rgba(50, 50, 50, .5);
     position: absolute;
-    top: -1.5em;
-    right: 0;
+    /*top: -1.5em;*/
+    right: 0.25em;
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 1.25em;
     font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
   }
   .product-department-category {
@@ -31,6 +31,9 @@
       text-decoration: none;
       cursor: pointer;
     }
+  }
+  .product-options {
+    display: inline-block;
   }
 }
 
