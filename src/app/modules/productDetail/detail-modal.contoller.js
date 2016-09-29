@@ -7,9 +7,10 @@ export default class DetailModalController {
    * @ngInject
      */
   constructor($scope, $modal, selectedProduct) {
-    this.selectedProduct=selectedProduct;
+    this.selectedProduct = selectedProduct;
+    this.modal = $modal;
   }
-  testClick() {
-    console.log('DetailModalController testClick()');
+  close() {
+    this.modal.closeAll();
   }
 }
