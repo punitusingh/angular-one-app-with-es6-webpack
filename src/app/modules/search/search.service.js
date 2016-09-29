@@ -22,7 +22,6 @@ export default class SearchService {
     items["eggs"].forEach(function(item) {
       allItems.push(item);
     });
-    console.log('search.service setItems called', this);
   }
 
   getItems(size) {

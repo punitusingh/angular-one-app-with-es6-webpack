@@ -1,3 +1,5 @@
+import { each } from 'lodash';
+
 export default class SearchController {
   /**
    *
@@ -5,11 +7,12 @@ export default class SearchController {
    * @param SearchService
    *@ngInject
    */
-  constructor($scope, SearchService) {
-    console.log('search.controller arguments', arguments);
-    console.log('search.controller this', this);
+  constructor($scope, SearchService, shoppingCart) {
+    // console.log('search.controller arguments', arguments);
+    // console.log('search.controller this', this);
     this.name = 'Search Items';
     this.searchService = SearchService;
+    this.shoppingCart = shoppingCart;
     var search = this;
     this.defaultResults();
     $scope.searchItems = this.searchItems.bind(this);
@@ -36,6 +39,7 @@ export default class SearchController {
     let results = [];
     var search = this;
 
+    const shoppingCart = this.shoppingCart;
     this.searchService.searchItems().then(function(response) {
       search.searchService.setItems(response.data);
       search.next();
