@@ -1,6 +1,37 @@
-.product-detail {
-  width: 40em;
-  height: 45em;
+.product-detail-modal {
+  outline: none;
+  width: 350px;
+  height: 300px;
+  margin-bottom: 1rem;
+  transform: translate3d(0,0,0);
+  background: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  text-align: left;
+  @media (min-width: 768px) {
+    height: auto;
+    max-width: 700px;
+    &.flexible {
+      width: auto;
+    }
+  }
+  .product-detail-modal-close-btn {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .product-department-category {
+    padding-left: 1em;
+    font-size: 1em;
+    & a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }
 
 .ModalOverlay {
@@ -32,22 +63,3 @@
 /**
  * Modal itself
  */
-.Modal {
-  outline: none;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 1rem;
-  transform: translate3d(0,0,0);
-  background: #fff;
-  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
-  text-align: left;
-  @media (min-width: 768px) {
-    height: auto;
-    max-width: 700px;
-    &.flexible {
-      width: auto;
-    }
-  }
-}
-
-

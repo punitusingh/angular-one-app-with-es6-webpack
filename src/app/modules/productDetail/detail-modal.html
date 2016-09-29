@@ -1,5 +1,9 @@
-<div class="product-detail Modal">
-  <div>This is the modal for {{detailModalCtrl.selectedProduct.item}}</div>
+<div class="product-detail-modal">
+  <div class="product-detail-modal-close-btn" ng-click="detailModalCtrl.close()">x</div>
+  <div class="product-department-category">
+    <a>{{detailModalCtrl.selectedProduct.item.department}}</a>
+    &#47;
+    <a>{{detailModalCtrl.selectedProduct.item.category}}</a>
+  </div>
   <img ng-src="{{detailModalCtrl.selectedProduct.item.url}}"/>
-  <button class="btn btn-success" ng-click="detailModalCtrl.close()">Close</button>
 </div>
