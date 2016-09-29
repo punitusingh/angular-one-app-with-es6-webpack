@@ -5,50 +5,76 @@ export default class SearchService {
     this.name = 'SearchService';
     this.$http = $http;
     this.$timeout = $timeout;
-    this.itemIndex = 0;
     this.page = 0;
   }
 
+    resetPage(){
+        this.page=0;
+    }
+
   searchItems(userInput, promise) {
+      console.log("searchService.searchItems", this.$http.get('autocomplete.json'))
+      console.log("promise",promise);
+      this.resetPage();
     return this.$http.get('autocomplete.json');
   }
 
-  setItems(items) {
-    var allItems = this.allItems = [];
-    items["bread"].forEach(function(item) {
-      allItems.push(item);
-    });
-
-    items["eggs"].forEach(function(item) {
-      allItems.push(item);
+  setItems(data) {
+      this.resetPage();
+    this.allItems = data['items'].filter(function(item){
+        return item.url;
     });
   }
 
-  getItems(size) {
-    let items;
+  filterItems(userInput){
+      console.log("this.allItems",this.allItems);
+      this.filteredItems=this.allItems.filter(function(item){
+          return item.description.indexOf(userInput)!==-1 && item.url;
+      });
+      this.resetPage();
+      return this.filteredItems;
+  }
+
+    searchResponse(userInput){
+        return this.allItems.filter(function(item){
+            return item.description.indexOf(userInput)!==-1;
+        });
+    }
+
+   clearItems(){
+       this.page=0;
+       this.filteredItems=undefined;
+   }
+
+  getItems(size){
+      console.log("searchservice getitems page",this.page);
+      console.log("this.filteredItems",this.filteredItems);
+      console.log("this.allItems",this.allItems);
+    let items,startIndex,endIndex;
+
+      var filteredItems=this.filteredItems||this.allItems;
+      console.log("filteredItems",filteredItems);
     if (size > 0) {
       this.page++;
-      let endIndex = this.page * size;
-      let startIndex = endIndex - size;
-      if (endIndex < this.allItems.length) {
-        items = this.allItems.slice(startIndex, size);
-      } else if (startIndex < this.allItems.length - 1) {
-        items = this.allItems.slice(startIndex);
-      }
+      endIndex = this.page * size;
+      startIndex = endIndex - size;
     } else {
       size = Math.abs(size);
       this.page--;
-      let endIndex = this.page*size;
-      let startIndex = endIndex-size;
-      if (startIndex >= 0) {
-        items = this.allItems.slice(startIndex, endIndex);
-      }
+      endIndex = this.page*size;
+      startIndex = endIndex-size;
     }
+      console.log("this.page",this.page);
+      console.log("startIndex",startIndex);
+      console.log("endIndex",endIndex);
+      items = filteredItems.slice(startIndex, endIndex);
 
-    console.log("this.page",this.page);
+      console.log("this.page * size",this.page * size);
+      console.log("filteredItems.length",filteredItems.length);
+
     return {
       items: items,
-      next: (this.page * size) < this.allItems.length,
+      next: (this.page * size) < filteredItems.length,
       prev: ((this.page - 1) * size) > 0
     };
   }

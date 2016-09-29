@@ -17,22 +17,31 @@ export default class SearchController {
     this.defaultResults();
     $scope.searchItems = this.searchItems.bind(this);
     $scope.searchResponseFormatter = function(json) {
-      for (var key of Object.keys(json)) {
-        if (key.indexOf(search.userInput)!== -1) {
-          return {results:json[key]}
+      console.log("json",json);
+        if(!(json && json.items && search.userInput && search.userInput.length>2)){
+            return {results:[]};
         }
-      }
-      return {results:[]};
+        return {results:search.searchService.searchResponse(search.userInput)};
     };
     $scope.objectSelectedCallback = function(object) {
-      // console.log('objectSelectedCallback object', object);
-      search.searchResultItems = [{"name":"bread", "description":"simple white bread"},
-        {"name":"gluten free bread", "description":"gluten free bread"},
-        {"name":"sourdough bread", "description":"sourdough bread"},
-        {"name":"whole wheat bread", "description":"whole wheat bread"},
-        {"name":"pita bread", "description":"pita bread"}
-      ];
+       console.log('objectSelectedCallback object', object);
+        if(!object){
+            return;
+        }
+
+        var selectedWord = object.title;
+        search.searchService.filterItems(selectedWord);
+        search.next();
     };
+      $scope.inputChangedCallback=function(item){
+          console.log("inputChangedCallback item::",item);
+          console.log("inputChangedCallback item.length::",item.length);
+          if(!item || item.length===0){
+              console.log("calling defaultResults from inputChangedCallback");
+              search.searchService.clearItems();
+              search.next();
+          }
+      }
   }
 
   defaultResults() {
@@ -47,6 +56,7 @@ export default class SearchController {
   }
 
   searchItems(userInput, promise) {
+      console.log("searchItems userInput",userInput);
     this.userInput = userInput;
     return this.searchService.searchItems(userInput, promise);
   }
