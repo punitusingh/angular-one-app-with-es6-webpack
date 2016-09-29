@@ -4,7 +4,6 @@ import DetailModalController from './detail-modal.contoller';
 import detailModalComponent from './detail-modal.component';
 import selectedProduct from './../common/selectedProduct.service.js';
 import detailModalConfig from './detail-modal.config';
-import './detail-modal.scss';
 
 /**
  * @ngInject

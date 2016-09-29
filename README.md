@@ -8,7 +8,7 @@ $ cd angular-poc
 
 $ npm install
 
-$ npm start
+$ npm run server
 ```
 
 [http://localhost:8080/search](http://localhost:8080/search).

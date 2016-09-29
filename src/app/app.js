@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import './app.scss';
 
 import angular from 'angular';

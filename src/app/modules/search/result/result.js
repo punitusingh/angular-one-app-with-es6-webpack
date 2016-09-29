@@ -3,7 +3,6 @@ import ResultController from './result.controller';
 import resultComponent from './result.component';
 import detailModalComponent from '../../productDetail/detail-modal';
 import shoppingCart from '../../common/shoppingCart.service.js';
-import './result.scss';
 
 
 /**

@@ -1,4 +1,15 @@
 /* styles in src/style directory are applied to the whole page */
+
+/*vendor css*/
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../../node_modules/angucomplete-alt/angucomplete-alt.css";
+
+/*app css*/
+@import "modules/search/search";
+@import "modules/search/result/result";
+@import "modules/productDetail/detail-modal";
+
+
 body {
 
 }
