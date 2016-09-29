@@ -47,15 +47,16 @@ export default class SearchController {
     return this.searchService.searchItems(userInput, promise);
   }
 
-  next(){
-      var stateObj=this.searchService.getItems(5);
+  next() {
+      var stateObj = this.searchService.getItems(5);
       console.log("stageObj",stateObj);
       this.searchResultItems=stateObj.items;
       this.pageState={next:stateObj.next, prev:stateObj.prev};
   }
-    prev(){
-        var stateObj=this.searchService.getItems(-5);
-        this.searchResultItems=stateObj.items;
-        this.pageState={next:stateObj.next, prev:stateObj.prev};
-    }
+
+  prev() {
+      var stateObj = this.searchService.getItems(-5);
+      this.searchResultItems=stateObj.items;
+      this.pageState = {next:stateObj.next, prev:stateObj.prev};
+  }
 }
