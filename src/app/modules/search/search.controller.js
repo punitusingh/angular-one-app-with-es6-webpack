@@ -8,8 +8,6 @@ export default class SearchController {
    *@ngInject
    */
   constructor($scope, SearchService, shoppingCart) {
-    // console.log('search.controller arguments', arguments);
-    // console.log('search.controller this', this);
     this.name = 'Search Items';
     this.searchService = SearchService;
     this.shoppingCart = shoppingCart;
@@ -17,14 +15,14 @@ export default class SearchController {
     this.defaultResults();
     $scope.searchItems = this.searchItems.bind(this);
     $scope.searchResponseFormatter = function(json) {
-      console.log("json",json);
+      // console.log("json",json);
         if(!(json && json.items && search.userInput && search.userInput.length>2)){
             return {results:[]};
         }
         return {results:search.searchService.searchResponse(search.userInput)};
     };
     $scope.objectSelectedCallback = function(object) {
-       console.log('objectSelectedCallback object', object);
+       // console.log('objectSelectedCallback object', object);
         if(!object){
             return;
         }
@@ -34,10 +32,10 @@ export default class SearchController {
         search.next();
     };
       $scope.inputChangedCallback=function(item){
-          console.log("inputChangedCallback item::",item);
-          console.log("inputChangedCallback item.length::",item.length);
+          // console.log("inputChangedCallback item::",item);
+          // console.log("inputChangedCallback item.length::",item.length);
           if(!item || item.length===0){
-              console.log("calling defaultResults from inputChangedCallback");
+              // console.log("calling defaultResults from inputChangedCallback");
               search.searchService.clearItems();
               search.next();
           }
@@ -56,14 +54,14 @@ export default class SearchController {
   }
 
   searchItems(userInput, promise) {
-      console.log("searchItems userInput",userInput);
+      // console.log("searchItems userInput",userInput);
     this.userInput = userInput;
     return this.searchService.searchItems(userInput, promise);
   }
 
   next() {
       var stateObj = this.searchService.getItems(5);
-      console.log("stageObj",stateObj);
+      // console.log("stageObj",stateObj);
       this.searchResultItems=stateObj.items;
       this.pageState={next:stateObj.next, prev:stateObj.prev};
   }

@@ -1,7 +1,7 @@
 .product-detail-modal {
   outline: none;
   width: 700px;
-  max-height: 375px;
+  max-height: 750px;
   margin-bottom: 1rem;
   transform: translate3d(0,0,0);
   background: #fff;
@@ -13,6 +13,10 @@
     &.flexible {
       width: auto;
     }
+  }
+  & a {
+    text-decoration: none;
+    cursor: pointer;
   }
   .product-detail-modal-close-btn {
     cursor: pointer;
@@ -27,13 +31,19 @@
   .product-department-category {
     padding-left: 1em;
     font-size: 1em;
-    & a {
-      text-decoration: none;
-      cursor: pointer;
-    }
   }
   .product-options {
     display: inline-block;
+  }
+  .product-detail-favorite-heart {
+    color: white;
+    text-shadow: red 1px 1px 5px;
+  }
+  .product-detail-favorite-link {
+    color: red;
+  }
+  .product-detail-favorite-link:hover {
+    color: crimson;
   }
 }
 
