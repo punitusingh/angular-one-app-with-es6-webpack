@@ -78,4 +78,11 @@ export default class SearchService {
       prev: ((this.page - 1) * size) > 0
     };
   }
+
+  getRelatedItems(relative) {
+    const related = this.allItems.filter(function(item) {
+      return (item.category === relative.category && item.name !== relative.name);
+    });
+    return related;
+  }
 }

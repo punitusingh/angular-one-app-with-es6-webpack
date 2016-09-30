@@ -6,11 +6,12 @@ export default class DetailModalController {
    * @param selectedProduct
    * @ngInject
      */
-  constructor($scope, $modal, selectedProduct, shoppingCart, relatedItems) {
+  constructor($scope, $modal, selectedProduct, shoppingCart, SearchService) {
     this.selectedProduct = selectedProduct;
     this.modal = $modal;
     this.shoppingCart = shoppingCart;
-    this.relatedItems = relatedItems;
+    this.relatedItems = SearchService.getRelatedItems(selectedProduct.item);
+    console.log('detail-modal.controller this', this);
   }
   close() {
     this.modal.closeAll();

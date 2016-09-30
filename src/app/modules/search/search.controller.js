@@ -11,6 +11,7 @@ export default class SearchController {
     this.name = 'Search Items';
     this.searchService = SearchService;
     this.shoppingCart = shoppingCart;
+    this._MAX_ITEMS_PER_PAGE = 5;
     var search = this;
     this.defaultResults();
     $scope.searchItems = this.searchItems.bind(this);
@@ -46,7 +47,6 @@ export default class SearchController {
     let results = [];
     var search = this;
 
-    const shoppingCart = this.shoppingCart;
     this.searchService.searchItems().then(function(response) {
       search.searchService.setItems(response.data);
       search.next();
@@ -60,14 +60,14 @@ export default class SearchController {
   }
 
   next() {
-      var stateObj = this.searchService.getItems(5);
+      var stateObj = this.searchService.getItems(this._MAX_ITEMS_PER_PAGE);
       // console.log("stageObj",stateObj);
       this.searchResultItems=stateObj.items;
       this.pageState={next:stateObj.next, prev:stateObj.prev};
   }
 
   prev() {
-      var stateObj = this.searchService.getItems(-5);
+      var stateObj = this.searchService.getItems(-1 * this._MAX_ITEMS_PER_PAGE);
       this.searchResultItems=stateObj.items;
       this.pageState = {next:stateObj.next, prev:stateObj.prev};
   }

@@ -1,15 +1,21 @@
 {
   "items":[
-    {"name":"bread", "description":"simple white bread", "url":"/img/products/breads/bread-1.jpg","price":"4.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
-    {"name":"gluten free bread", "description":"gluten free bread", "url":"/img/products/breads/bread-2.jpg","price":"5.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
-    {"name":"sourdough bread", "description":"sourdough bread", "url":"/img/products/breads/bread-3.jpg","price":"6.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
-    {"name":"whole wheat bread", "description":"whole wheat bread", "url":"/img/products/breads/bread-4.jpg","price":"5.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
-    {"name":"pita bread", "description":"pita bread", "url":"/img/products/breads/bread-5.jpg","price":"7.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
-    {"name":"eggs", "description":"eggs","url":"/img/products/eggs/egg-1.jpg","price":"3.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
-    {"name":"eggs organic", "description":"eggs organic","url":"/img/products/eggs/egg-1.jpg","price":"4.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
-    {"name":"eggs cage free", "description":"eggs cage free","url":"/img/products/eggs/egg-2.jpg","price":"3.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
-    {"name":"pasture raised eggs", "description":"pasture raised eggs","url":"/img/products/eggs/egg-3.jpg","price":"2.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
-    {"name":"organic brown eggs", "description":"organic brown eggs","url":"/img/products/eggs/egg-4.jpg","price":"6.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
-    {"name": "organic cage free eggs", "description": "organic cage free eggs","url":"/img/products/eggs/egg-5.jpg","price":"6.49", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"}
-    ]
+    {"name": "bread", "description": "simple white bread", "url": "/img/products/breads/bread-1.jpg", "detailUrl": "/img/products/breads/detail/bread-detail-1.jpg", "price": "4.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
+    {"name":"gluten free bread", "description":"gluten free bread", "url":"/img/products/breads/bread-2.jpg", "detailUrl":"/img/products/breads/detail/bread-detail-2.jpg", "price":"5.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
+    {"name":"sourdough bread", "description":"sourdough bread", "url":"/img/products/breads/bread-3.jpg", "detailUrl":"/img/products/breads/detail/bread-detail-3.jpg", "price":"6.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
+    {"name":"whole wheat bread", "description":"whole wheat bread", "url":"/img/products/breads/bread-4.jpg", "detailUrl":"/img/products/breads/detail/bread-detail-4.jpg", "price":"5.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
+    {"name":"pita bread", "description":"pita bread", "url":"/img/products/breads/bread-5.jpg", "detailUrl":"/img/products/breads/detail/bread-detail-5.jpg", "price":"7.99", "department": "bakery", "category": "bread", "weight": "18 oz"},
+    {"name":"eggs", "description":"eggs", "url":"/img/products/eggs/egg-1.jpg", "detailUrl":"/img/products/eggs/detail/egg-detail-1.jpg", "price":"3.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
+    {"name":"eggs organic", "description":"eggs organic", "url":"/img/products/eggs/egg-2.jpg", "detailUrl":"/img/products/eggs/detail/egg-detail-2.jpg", "price":"4.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
+    {"name":"eggs cage free", "description":"eggs cage free", "url":"/img/products/eggs/egg-3.jpg", "detailUrl":"/img/products/eggs/detail/egg-detail-3.jpg", "price":"3.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
+    {"name":"pasture raised eggs", "description":"pasture raised eggs", "url":"/img/products/eggs/egg-4.jpg", "detailUrl":"/img/products/eggs/detail/egg-detail-4.jpg", "price":"2.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
+    {"name":"organic brown eggs", "description":"organic brown eggs", "url":"/img/products/eggs/egg-5.jpg", "detailUrl":"/img/products/eggs/detail/egg-detail-5.jpg", "price":"6.99", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
+    {"name": "organic cage free eggs", "description": "organic cage free eggs", "url":"/img/products/eggs/egg-6.jpg", "detailUrl":"/img/products/eggs/detail/egg-detail-6.jpg", "price":"6.49", "department": "dairy & eggs", "category": "eggs", "weight": "18 ct"},
+    {"name": "coffee", "description": "cold brew coffee", "url":"/img/products/coffee/coffee-1.jpg", "detailUrl":"/img/products/coffee/detail/coffee-detail-1.jpg", "price":"3.99", "department": "beverages", "category": "coffee", "weight": "10.5 oz"},
+    {"name": "iced coffee", "description": "iced coffee new orleans", "url":"/img/products/coffee/coffee-2.jpg", "detailUrl":"/img/products/coffee/detail/coffee-detail-2.jpg", "price":"3.99", "department": "beverages", "category": "coffee", "weight": "10.66 oz"},
+    {"name": "coffee beans", "description": "instant coffee beans jar", "url":"/img/products/coffee/coffee-3.jpg", "detailUrl":"/img/products/coffee/detail/coffee-detail-3.jpg", "price":"6.99", "department": "beverages", "category": "coffee", "weight": "3.5 oz"},
+    {"name": "ground coffee", "description": "ground coffee powder bag", "url":"/img/products/coffee/coffee-4.jpg", "detailUrl":"/img/products/coffee/detail/coffee-detail-4.jpg", "price":"10.99", "department": "beverages", "category": "coffee", "weight": "24 oz"},
+    {"name": "decaf coffee", "description": "decaf decaffeinated coffee ground", "url":"/img/products/coffee/coffee-5.jpg", "detailUrl":"/img/products/coffee/detail/coffee-detail-5.jpg", "price":"12.99", "department": "beverages", "category": "coffee", "weight": "24 oz"},
+    {"name": "french roast coffee", "description": "extra dark french roast coffee", "url":"/img/products/coffee/coffee-6.jpg", "detailUrl":"/img/products/coffee/detail/coffee-detail-6.jpg", "price":"9.99", "department": "beverages", "category": "coffee", "weight": "12 oz"}
+  ]
 }

@@ -1,17 +1,15 @@
 import angular from 'angular';
 import 'angucomplete-alt';
+import searchResult from './result/result';
 
 import SearchController from './search.controller';
 import searchComponent from './search.component';
-import SearchService from './search.service';
 
-import searchResult from './result/result';
 
 /**
  * @ngInject
  */
 export default angular.module('app.search', ['angucomplete-alt', searchResult])
-	.service('SearchService', SearchService)
 	.component('search', searchComponent)
 	.controller('SearchController', SearchController)
 	.name;
