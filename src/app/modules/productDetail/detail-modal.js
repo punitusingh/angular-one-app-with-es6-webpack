@@ -1,6 +1,6 @@
 import angular from 'angular';
 import angularModal from 'meanie-angular-modal';
-import SearchService from '../common/search.service.js';
+import SearchService from '../search/search.service.js';
 import selectedProduct from './../common/selectedProduct.service.js';
 import shoppingCart from '../common/shoppingCart.service.js';
 

@@ -1,5 +1,5 @@
 <div class="search">
-  <h1>{{search.name}}</h1>
+  <h1>{{search.description}}</h1>
   <angucomplete-alt id="search-groceries"
                     placeholder="Search Groceries"
                     pause="400"
@@ -8,7 +8,7 @@
                     remote-api-handler="searchItems"
                     remote-url-data-field="results"
                     remote-url-response-formatter="searchResponseFormatter"
-                    title-field="name"
+                    title-field="description"
                     input-class="form-control form-control-small">
   </angucomplete-alt>
 </div>

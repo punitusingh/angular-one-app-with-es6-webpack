@@ -1,3 +1,5 @@
+import { shuffle } from 'lodash';
+
 export default class SearchService {
   /*@ngInject*/
   constructor($http, $timeout) {
@@ -83,6 +85,6 @@ export default class SearchService {
     const related = this.allItems.filter(function(item) {
       return (item.category === relative.category && item.name !== relative.name);
     });
-    return related;
+    return shuffle(related);
   }
 }

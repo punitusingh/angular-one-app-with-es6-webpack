@@ -2,7 +2,7 @@
   <li class="search-result-item img-thumbnail img-responsive" ng-repeat="item in resultCtrl.items">
     <div class="search-result-item-count" ng-show="resultCtrl.shoppingCart.getItemCount(item.name) > 0">{{resultCtrl.shoppingCart.getItemCount(item.name)}}</div>
     <img ng-src="{{item.url}}" ng-click="resultCtrl.productDetail(item)"/>
-    <div class="item-info">{{item.description}}</div>
+    <div class="item-info">{{item.name}}</div>
     <button class="btn btn-success small remove-button" ng-click="resultCtrl.shoppingCart.decrement(item.name)"><i class="glyphicon glyphicon-minus"></i></button>
     <button class="btn btn-success small add-button" ng-click="resultCtrl.shoppingCart.increment(item.name)"><i class="glyphicon glyphicon-plus"></i>ADD</button>
   </li>

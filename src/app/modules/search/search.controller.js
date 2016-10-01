@@ -11,7 +11,7 @@ export default class SearchController {
     this.name = 'Search Items';
     this.searchService = SearchService;
     this.shoppingCart = shoppingCart;
-    this._MAX_ITEMS_PER_PAGE = 5;
+    this._MAX_ITEMS_PER_PAGE = 15;
     var search = this;
     this.defaultResults();
     $scope.searchItems = this.searchItems.bind(this);

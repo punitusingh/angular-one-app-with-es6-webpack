@@ -45,6 +45,18 @@
   .product-detail-favorite-link:hover {
     color: crimson;
   }
+  .product-detail-price {
+    color: black;
+    font-weight: bold;
+  }
+  .product-detail-weight,
+  .product-detail-related-item-price {
+    color: grey;
+    font-weight: 100;
+  }
+  .product-detail-related-items-container {
+    border-top: 1px solid #d3d3d3;
+  }
 }
 
 .ModalOverlay {
