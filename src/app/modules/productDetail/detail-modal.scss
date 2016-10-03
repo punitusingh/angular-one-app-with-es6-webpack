@@ -35,6 +35,13 @@
   .product-options {
     display: inline-block;
   }
+  .product-detail-name {
+    font-size: 2em;
+  }
+  .product-detail-user-features-container {
+    border-top: 1px solid #d3d3d3;
+    padding-top: 2em;
+  }
   .product-detail-favorite-heart {
     color: white;
     text-shadow: red 1px 1px 5px;
@@ -48,11 +55,15 @@
   .product-detail-price {
     color: black;
     font-weight: bold;
+    font-size: 1.5em;
   }
   .product-detail-weight,
   .product-detail-related-item-price {
     color: grey;
     font-weight: 100;
+  }
+  .product-detail-add-to-cart {
+    margin: 2em auto 1em auto;
   }
   .product-detail-related-items-container {
     border-top: 1px solid #d3d3d3;
