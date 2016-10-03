@@ -22,7 +22,6 @@
     cursor: pointer;
     color: rgba(50, 50, 50, .5);
     position: absolute;
-    /*top: -1.5em;*/
     right: 0.25em;
     text-transform: uppercase;
     font-size: 1.25em;
@@ -51,6 +50,10 @@
   }
   .product-detail-favorite-link:hover {
     color: crimson;
+  }
+  .product-detail-favorite,
+  .product-detail-add-to-list {
+    font-size: 1em;
   }
   .product-detail-price {
     color: black;
@@ -95,7 +98,3 @@
   overflow: hidden;
   backface-visibility: hidden;
 }
-
-/**
- * Modal itself
- */
