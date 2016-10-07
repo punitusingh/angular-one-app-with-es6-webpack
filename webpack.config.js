@@ -87,11 +87,12 @@ module.exports = function makeWebpackConfig () {
       test: /\.js$/,
       loaders: ['ng-annotate','babel'],
       exclude: /node_modules/
-    },{
+    },
+    {
       test: /\.scss$/,
       loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
     },
-      {
+    {
       // CSS LOADER
       // Reference: https://github.com/webpack/css-loader
       // Allow loading css through js
@@ -105,29 +106,36 @@ module.exports = function makeWebpackConfig () {
       // Reference: https://github.com/webpack/style-loader
       // Use style-loader in development.
       loader: isTest ? 'null' : ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss-loader')
-    }, {
+    },
+    {
       // ASSET LOADER
       // Reference: https://github.com/webpack/file-loader
       // Copy png, jpg, jpeg, gif, svg, woff, woff2, ttf, eot files to output
       // Rename the file using the asset hash
       // Pass along the updated reference to your code
       // You can add here any file extension you want to get copied to your output
-      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+      test: /\.(png|jpg|jpeg|gif)$/,
       loader: 'file'
-    }, {
+    },
+    {
       // HTML LOADER
       // Reference: https://github.com/webpack/raw-loader
       // Allow loading html through js
       test: /\.html$/,
       loader: 'raw'
-    },{
+    },
+    {
       // JSON LOADER
       // Reference: https://github.com/webpack/json-loader
       // Allow loading json through js
       test: /\.json$/,
       loader: 'json'
-    }
-    ]
+    },
+    {
+      // Used for loading Bootstrap fonts
+      test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+      loader: 'url-loader'
+    }]
   };
 
   // ISPARTA LOADER
