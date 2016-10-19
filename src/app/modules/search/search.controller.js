@@ -20,7 +20,7 @@ export default class SearchController {
         if(!(json && json.items && search.userInput && search.userInput.length>2)){
             return {results:[]};
         }
-        return {results:search.searchService.searchResponse(search.userInput)};
+        return {results:search.searchService.searchResponse(search.userInput.toLowerCase())};
     };
     $scope.objectSelectedCallback = function(object) {
        // console.log('objectSelectedCallback object', object);
